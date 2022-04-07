@@ -4,5 +4,14 @@
 	<title>Dictionary</title>
 </head>
 <body>
+	<h1 align="center">Dictionary</h1>
+	<div>
+		<label for="input">Add a word in the dictionary:</label>
+		<input type="text" id="word" name="name" placeholder="lowercase word" required pattern="[A-z]">
+		<input type="hidden" id="hidden" />
+		<button type="button" id="addButton" onclick="addWordToList()">Add</button>
+	</div>
+	
+	<script src="Dictionary.js"></script>
 </body>
 </html>
