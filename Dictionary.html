@@ -11,6 +11,15 @@
 		<input type="hidden" id="hidden" />
 		<button type="button" id="addButton" onclick="addWordToList()">Add</button>
 	</div>
+	<div>
+		<label for="search">Search for the word in the dictionary:</label>
+		<input type="search" id="wordToSearch" name="search" placeholder="lowercase word" required>
+		<button type="button" id="searchWord" onclick="searchWordInList()">Search</button>
+	</div>
+	<div>
+		<ul id="list">
+		</ul>
+	</div>
 	
 	<script src="Dictionary.js"></script>
 </body>
