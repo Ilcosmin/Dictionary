@@ -1,18 +1,20 @@
+var wordArray = [];
 function addWordToList() {
-	let newWord = document.getElementById("word").value;
-	let addWord = document.createElement("li");
-	addWord.setAttribute("id", newWord);
-	let ul = document.getElementById("list");
-	ul.appendChild(addWord).style.display="none";	
+	let newWord = document.getElementById("wordToAdd").value;
+	if (newWord) {
+		wordArray.push(newWord);
+		inputMessage.innerHTML = "The word: '" + newWord + "' has been added to the dictionary";
+	}
 }
 
 function searchWordInList() {
-	let searchWord = document.getElementById("wordToSearch").value;
-	let existWord = document.getElementById(searchWord);
-	let message = document.querySelector("ul");
-	if (existWord) {
-		message.innerHTML = "This word already exist in the dictionary";
-	} else {
-		message.innerHTML = "This word does not exist in the dictionary. You can add it if you want!";
+	let searchedWord = document.getElementById("wordToSearch").value;
+	let existsWord = wordArray.includes(searchedWord);
+	if  (searchedWord !== "") {
+		if (existsWord) {
+			searchMessage.innerHTML = "This word already exists in the dictionary";
+		} else {
+			searchMessage.innerHTML = "This word does not exist in the dictionary. You can add it if you want!";
+		}
 	}
 }
