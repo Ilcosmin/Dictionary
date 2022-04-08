@@ -5,21 +5,22 @@
 </head>
 <body>
 	<h1 align="center">Dictionary</h1>
-	<div>
-		<label for="input">Add a word in the dictionary:</label>
-		<input type="text" id="word" name="name" placeholder="lowercase word" required pattern="[A-z]">
-		<input type="hidden" id="hidden" />
-		<button type="button" id="addButton" onclick="addWordToList()">Add</button>
-	</div>
-	<div>
-		<label for="search">Search for the word in the dictionary:</label>
-		<input type="search" id="wordToSearch" name="search" placeholder="lowercase word" required>
-		<button type="button" id="searchWord" onclick="searchWordInList()">Search</button>
-	</div>
-	<div>
-		<ul id="list">
-		</ul>
-	</div>
+	<fieldset id="1">
+		<div>
+			<p>Add a word to the dictionary:</p>
+			<input type="text" id="wordToAdd" name="input" required>
+			<button type="submit" id="addWord" name="inputButton" onclick="addWordToList()">Add</button>
+			<p id="inputMessage"></p>
+		</div>
+	</fieldset>
+	<fieldset id="2">
+		<div>
+			<p>Search for the word in the dictionary:</p>
+			<input type="text" id="wordToSearch" name="search" required>
+			<button type="submit" id="searchWord" name="searchButton" onclick="searchWordInList()">Search</button>
+			<p id="searchMessage"></p>
+		</div>
+	</fieldset>
 	
 	<script src="Dictionary.js"></script>
 </body>
