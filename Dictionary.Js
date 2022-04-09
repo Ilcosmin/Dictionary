@@ -4,6 +4,7 @@ function addWordToList() {
 	if (newWord) {
 		wordArray.push(newWord);
 		inputMessage.innerHTML = "The word: '" + newWord + "' has been added to the dictionary";
+		inputMessage.style.backgroundColor = "Aqua";
 	}
 }
 
@@ -13,8 +14,10 @@ function searchWordInList() {
 	if  (searchedWord !== "") {
 		if (existsWord) {
 			searchMessage.innerHTML = "This word already exists in the dictionary";
+			searchMessage.style.backgroundColor = "SpringGreen";
 		} else {
 			searchMessage.innerHTML = "This word does not exist in the dictionary. You can add it if you want!";
+			searchMessage.style.backgroundColor = "red";
 		}
 	}
 }
