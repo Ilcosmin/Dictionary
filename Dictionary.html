@@ -2,21 +2,24 @@
 <html>
 <head>
 	<title>Dictionary</title>
+
+	<link rel="stylesheet" href="Dictionary.css">
 </head>
 <body>
-	<h1 align="center">Dictionary</h1>
+	<h1>Dictionary</h1>
 	<fieldset id="1">
 		<div>
-			<p>Add a word to the dictionary:</p>
-			<input type="text" id="wordToAdd" name="input" required>
+			<p>Add a word to the dictionary</p>
+			<input type="text" id="wordToAdd" name="input">
 			<button type="submit" id="addWord" name="inputButton" onclick="addWordToList()">Add</button>
 			<p id="inputMessage"></p>
 		</div>
 	</fieldset>
+	<br>
 	<fieldset id="2">
 		<div>
-			<p>Search for the word in the dictionary:</p>
-			<input type="text" id="wordToSearch" name="search" required>
+			<p>Search for the word in the dictionary</p>
+			<input type="text" id="wordToSearch" name="search">
 			<button type="submit" id="searchWord" name="searchButton" onclick="searchWordInList()">Search</button>
 			<p id="searchMessage"></p>
 		</div>
