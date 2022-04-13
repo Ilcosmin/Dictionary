@@ -1,7 +1,7 @@
 var wordArray = [];
 function addWordToList() {
 	let newWord = document.getElementById("wordToAdd").value;
-	if (newWord) {
+	if (newWord.match("[a-z]")) {
 		wordArray.push(newWord);
 		inputMessage.innerHTML = "The word: '" + newWord + "' has been added to the dictionary";
 		inputMessage.style.backgroundColor = "Aqua";
@@ -10,8 +10,8 @@ function addWordToList() {
 
 function searchWordInList() {
 	let searchedWord = document.getElementById("wordToSearch").value;
-	let existsWord = wordArray.includes(searchedWord);
-	if  (searchedWord !== "") {
+	if  (searchedWord.match("[a-z]")) {
+		let existsWord = wordArray.includes(searchedWord);
 		if (existsWord) {
 			searchMessage.innerHTML = "This word already exists in the dictionary";
 			searchMessage.style.backgroundColor = "SpringGreen";
